@@ -2,7 +2,11 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d1418">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bohol 2026">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1418'/%3E%3Cpath d='M4 20c3-3 5 1 8-2s5 1 8-2 5 1 8-2' stroke='%234fd1c5' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <title>Panglao · Siquijor · 2026.09.13–18 (v3 · 조석 반영)</title>
 <style>
   :root{
@@ -15,6 +19,8 @@
     font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
     line-height:1.6;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1040px;margin:0 auto;padding:32px 20px 80px}
+  html{scroll-behavior:smooth}
+  [id]{scroll-margin-top:60px}
 
   header{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:24px}
   h1{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
@@ -120,8 +126,19 @@
 
   footer{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);
     font-size:11.5px;color:var(--dimmer);line-height:1.7}
+  a.tel{color:var(--aqua);text-decoration:none;border-bottom:1px dotted rgba(79,209,197,.5);
+    font-variant-numeric:tabular-nums;white-space:nowrap}
+  .jump{position:sticky;top:0;z-index:50;display:none;gap:6px;
+    background:rgba(13,20,24,.94);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);padding:9px 12px;margin:0 -14px 18px;
+    overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .jump a{flex:0 0 auto;font-size:12.5px;font-weight:600;text-decoration:none;
+    color:var(--dim);background:var(--panel2);border:1px solid var(--line);
+    border-radius:100px;padding:7px 13px;white-space:nowrap}
+
   /* ---------- mobile ---------- */
   @media(max-width:640px){
+    .jump{display:flex}
     .wrap{padding:22px 14px 64px}
     h1{font-size:21px}
     h2{font-size:16.5px;margin:34px 0 12px}
@@ -185,6 +202,7 @@
 <body>
 <div class="wrap">
 
+<nav class="jump"><a href="#d14">14일 Napaling</a><a href="#d15">15일 Siquijor</a><a href="#d16">16일 링로드</a><a href="#d17">17일 Caticugan</a><a href="#d18">18일 Danao</a><a href="#tides">조석표</a><a href="#contacts">연락처</a></nav>
 <header>
   <h1>Panglao · Siquijor — 조석 반영본</h1>
   <div class="sub">9/13(일) 심야 도착 → 9/18(금) 24:00 출국 · <b>Alona Austria 2박</b> → Coco Grove 2박 → Amorita 1박</div>
@@ -208,7 +226,7 @@
 </div>
 
 
-<h2>조석표 — 9/13~18, 2026</h2>
+<h2 id="tides">조석표 — 9/13~18, 2026</h2>
 
 <h3 class="sec">Panglao / Tagbilaran (남쪽 해안 Bolod·Alona + 북서쪽 해안 Napaling·Danao·Momo 공통)</h3>
 <div class="card" style="padding:6px 14px 14px">
@@ -303,16 +321,16 @@
 
 <div class="alert">
   <h3>주의: "Alona 오토바이 렌탈"로 검색되는 상위 3개 사이트가 전부 같은 회사입니다</h3>
-  <p>boholmotorcyclerental.com · panglaomotorcyclerental.com · islandrentals.ph — <b>주소가 전부 Tagbilaran East Road 724, Bool</b>이고 WhatsApp도 같은 번호(+63 917 503 0675)입니다. 도메인 이름과 달리 <b>Alona에 매장이 없고</b>, 호텔 배달은 <b>3일 이상</b>부터입니다. 9/14 하루만 쓰실 거라 맞지 않습니다.</p>
+  <p>boholmotorcyclerental.com · panglaomotorcyclerental.com · islandrentals.ph — <b>주소가 전부 Tagbilaran East Road 724, Bool</b>이고 WhatsApp도 같은 번호(<a class="tel" href="tel:+639175030675">+63 917 503 0675</a>)입니다. 도메인 이름과 달리 <b>Alona에 매장이 없고</b>, 호텔 배달은 <b>3일 이상</b>부터입니다. 9/14 하루만 쓰실 거라 맞지 않습니다.</p>
 </div>
 
 <div class="card" style="padding:6px 12px 12px;margin-bottom:12px">
 <table class="ftable">
   <tr><th>업체</th><th>연락처</th><th>요금</th><th>1일 대여</th><th>배달·회수</th><th>보증금</th></tr>
-  <tr><td class="nm">GOODBIKE<br><span style="font-weight:400;color:var(--dimmer)">Tawala 소재</span></td><td class="ph">+63 926 680 6486<br>(WhatsApp/Viber)</td><td>Click 125i ₱600<br>Mio 125i ₱550<br>Click 150i ₱700</td><td>공식 3일 최소<br><b>1일 문의 필요</b></td><td style="color:var(--leaf)"><b>Panglao 내 무료</b></td><td style="color:var(--leaf)"><b>없음</b></td></tr>
+  <tr><td class="nm">GOODBIKE<br><span style="font-weight:400;color:var(--dimmer)">Tawala 소재</span></td><td class="ph"><a class="tel" href="tel:+639266806486">+63 926 680 6486</a><br>(WhatsApp/Viber)</td><td>Click 125i ₱600<br>Mio 125i ₱550<br>Click 150i ₱700</td><td>공식 3일 최소<br><b>1일 문의 필요</b></td><td style="color:var(--leaf)"><b>Panglao 내 무료</b></td><td style="color:var(--leaf)"><b>없음</b></td></tr>
   <tr><td class="nm">Bohol Bikes</td><td class="ph">전화 <span class="nv">미공개</span><br>boholbikes.com<br>FB: WeLoveMotorbikes</td><td>Click 125i · Beat<br><b>₱350부터</b></td><td style="color:var(--leaf)"><b>24시간 최소 — 가능</b></td><td style="color:var(--leaf)"><b>무료, 일수 제한 없음</b><br>영업 05:00–23:00</td><td>₱1,000 + <b style="color:#f0857c">여권 원본 보관</b></td></tr>
-  <tr><td class="nm">Island Diaries</td><td class="ph">+63 906 713 9620<br>info@islanddiariesph.com</td><td>₱450/일</td><td style="color:var(--leaf)"><b>가능</b></td><td>₱300 (사무실 수령 시 무료)</td><td>있음, 금액 변동</td></tr>
-  <tr><td class="nm">FILRU</td><td class="ph">+63 977 190 6500</td><td>Click 125Fi ₱500<br>NMAX 155 ₱750</td><td>2일 최소</td><td>Panglao 내 무료<br>06:00–20:00</td><td><span class="nv">미확인</span></td></tr>
+  <tr><td class="nm">Island Diaries</td><td class="ph"><a class="tel" href="tel:+639067139620">+63 906 713 9620</a><br>info@islanddiariesph.com</td><td>₱450/일</td><td style="color:var(--leaf)"><b>가능</b></td><td>₱300 (사무실 수령 시 무료)</td><td>있음, 금액 변동</td></tr>
+  <tr><td class="nm">FILRU</td><td class="ph"><a class="tel" href="tel:+639771906500">+63 977 190 6500</a></td><td>Click 125Fi ₱500<br>NMAX 155 ₱750</td><td>2일 최소</td><td>Panglao 내 무료<br>06:00–20:00</td><td><span class="nv">미확인</span></td></tr>
 </table>
 <p style="font-size:11.5px;color:var(--dimmer);margin:10px 0 0">전 업체 <b>헬멧 2개 포함</b>이 표준입니다 — 다만 "1대당 1개"인 곳도 있으니 <b>예약할 때 2개를 명시</b>하세요. 보험은 사실상 없다고 보시면 됩니다(Bohol Bikes는 수리비 + 영업손실까지 임차인 부담을 명시). Alona Beach Road의 워크인 가게들은 실재하지만 온라인에 이름·주소가 잡히지 않습니다 — <b>13일 저녁에 10분만 걸어보시면</b> 원격으로 확인한 어떤 정보보다 나은 가격과 답을 얻으실 겁니다.</p>
 </div>
@@ -383,7 +401,7 @@
 <div class="card" style="padding:6px 12px 12px;margin-bottom:12px">
 <table class="ftable">
   <tr><th>리조트</th><th>입장료</th><th>환급</th><th>실부담</th><th>비고</th></tr>
-  <tr><td class="nm">Oceanica (구 South Palms)<br><span style="font-weight:400;color:var(--dimmer)">Bolod</span></td><td class="ph">₱500</td><td style="color:var(--leaf)"><b>전액 F&B</b></td><td style="color:var(--leaf)"><b>0원</b></td><td>2026년 2월 후기·6월 가이드 양쪽에서 확인 · Oceanica Seafood 06:00–22:00 · <b>+63 917 716 7609</b> / +63 38 502 8288<br><em>정식 데이유즈는 ₱888 (08:00–17:00, 풀·카약·SUP·테니스·South Farm 포함, F&B 크레딧 없음)</em></td></tr>
+  <tr><td class="nm">Oceanica (구 South Palms)<br><span style="font-weight:400;color:var(--dimmer)">Bolod</span></td><td class="ph">₱500</td><td style="color:var(--leaf)"><b>전액 F&B</b></td><td style="color:var(--leaf)"><b>0원</b></td><td>2026년 2월 후기·6월 가이드 양쪽에서 확인 · Oceanica Seafood 06:00–22:00 · <b><a class="tel" href="tel:+639177167609">+63 917 716 7609</a></b> / <a class="tel" href="tel:+63385028288">+63 38 502 8288</a><br><em>정식 데이유즈는 ₱888 (08:00–17:00, 풀·카약·SUP·테니스·South Farm 포함, F&B 크레딧 없음)</em></td></tr>
   <tr><td class="nm">Dumaluan (Semi Public 게이트)</td><td class="ph">₱100 + 주차 ₱20</td><td style="color:var(--leaf)">F&B 환급</td><td style="color:var(--leaf)">사실상 0원</td><td><b>이 스트립에서 가장 싼 게이트</b> · 2026년 2월 후기: "아주 적은 입장료인데 커피숍 쓰면 돌려받는다" · <b>038 502-9092</b><br><em>₱25 / ₱75 / ₱250 등 다른 숫자가 도는 건 <b>이름이 비슷한 업소가 3개</b>라서입니다 (Dumaluan Beach Resort / Dumaluan Semi Public / Marilou Resort) — 리뷰어마다 다른 게이트</em></td></tr>
   <tr><td class="nm">Bluewater Panglao<br><span style="font-weight:400;color:var(--dimmer)">Danao — 북서쪽 해안!</span></td><td class="ph">약 ₱1,000</td><td>₱700 F&B</td><td>₱300</td><td>09:00–17:00 · 점심 1식 + 음료 1잔 + 풀 + 카약/SUP + 타월 포함 · <b>Danao Wall 바로 그 해안</b>이라 오전 물놀이 끝내고 쓰기 좋음 · OTA에서 자주 매진</td></tr>
   <tr><td class="nm">Bohol Beach Club</td><td class="ph">₱1,000</td><td>₱650</td><td>₱350</td><td><b>식당만 이용하는 건 안 됩니다</b> — "샤워실·수영장·레스토랑 이용 불가, 그냥 입장료를 내라"가 공식 답변 · 만실이면 워크인 거절 · <b>사전 예약도 안 받고 당일 전화만</b> 받습니다</td></tr>
@@ -457,7 +475,7 @@
 <h2>일정</h2>
 
 <!-- DAY 0/1 -->
-<div class="day">
+<div class="day" id="d14">
   <div class="dayhead">
     <span class="dnum">DAY 1</span><span class="ddate">9/14 (월)</span>
     <span class="dtheme">★ 조수 최상일 — Napaling + Momo 더블 세션</span>
@@ -477,27 +495,27 @@
     Napaling을 먼저 두고 Momo를 나중에 둔 것도 물이 차오르는 방향에 맞춘 겁니다.<br>
     북서쪽 해안에서 <b>유일하게 모래로 걸어 들어가는 리프</b>. 거북 목격 잦고 사람 거의 없습니다
     <span class="ct">조위 08:50 <b>≈0.80m</b> → 10:45 <b>≈1.34m</b> (상승, 만조 12:30 1.55m)</span></div></td></tr>
-    <tr class="move"><td class="t">11:00</td><td><span class="place">오토바이 인수 — 숙소 배달<span class="pill p-moto">1일 대여</span></span><div class="note">Honda Click 125 권장(시트 아래 수납, 2인 승차 편함). <b>인수 시 사방 사진 + 시각 기록</b>, 헬멧 2개 확인<span class="ct">GOODBIKE <b>+63 926 680 6486</b> (보증금 없음, Panglao 무료 배달·회수 — 3일 최소를 1일로 예외 요청)<br>Island Diaries <b>+63 906 713 9620</b> (₱450 + 배달 ₱300 = 하루 ₱750 확정가)</span></div></td></tr>
+    <tr class="move"><td class="t">11:00</td><td><span class="place">오토바이 인수 — 숙소 배달<span class="pill p-moto">1일 대여</span></span><div class="note">Honda Click 125 권장(시트 아래 수납, 2인 승차 편함). <b>인수 시 사방 사진 + 시각 기록</b>, 헬멧 2개 확인<span class="ct">GOODBIKE <b><a class="tel" href="tel:+639266806486">+63 926 680 6486</a></b> (보증금 없음, Panglao 무료 배달·회수 — 3일 최소를 1일로 예외 요청)<br>Island Diaries <b><a class="tel" href="tel:+639067139620">+63 906 713 9620</a></b> (₱450 + 배달 ₱300 = 하루 ₱750 확정가)</span></div></td></tr>
     <tr class="food"><td class="t">11:15</td><td><span class="place">늦은 조식 — CRAZE Artisan Café<span class="pill p-food">4.9 / 1,445</span></span><div class="note">Alona 칼텍스 앞, 07:00–23:00. 크레페·와플·비스코프 라떼<span class="ct">Anos Fonacier 순환도로, Tawala · IG @crazecafebohol · <b>카드 불가, 현금·GCash만</b></span></div></td></tr>
     <tr class="rest"><td class="t">12:15–14:15</td><td><span class="place">수면 보충 — 또는 Dumaluan 만조 세션<span class="pill p-tide">만조 12:30</span></span><div class="note">누적 수면부채가 이번 일정 최대 리스크라 원칙은 자는 겁니다. 다만—<br>
     <b>못 가보신 Dumaluan·Bolod를 넣으실 거면 이 시간이 이번 주 유일한 창입니다.</b> 만조 12:30(1.55m)이고, 오후 만조는 매일 낮아져서 18일엔 0.88m까지 떨어집니다.
     <b>Oceanica에서 ₱500 내고 전액 밥값으로 돌려받는 방식</b>이 제일 낫습니다 — 사실상 점심값만 내고 수영하는 셈이죠. 리프 엣지는 못 가지만 플랫에서 불가사리·흰동가리·산호 패치는 봅니다.
     <em>대신 오후 폭포 라이딩은 포기하고 Panglao 순환도로 일주(플랜B)로 바꾸세요. 잠 없이 둘 다는 무리입니다.</em>
-    <span class="ct">Oceanica <b>+63 917 716 7609</b> · Dumaluan <b>038 502-9092</b> · 무료로 가려면 <b>Libaong Beach에서 모래사장 따라 도보</b></span></div></td></tr>
+    <span class="ct">Oceanica <b><a class="tel" href="tel:+639177167609">+63 917 716 7609</a></b> · Dumaluan <b>038 502-9092</b> · 무료로 가려면 <b>Libaong Beach에서 모래사장 따라 도보</b></span></div></td></tr>
     <tr class="ride"><td class="t">14:45–18:00</td><td><span class="place">Antequera 지역 폭포 라이딩 — Mag-Aso + Kawasan<span class="pill p-moto">왕복 2시간</span></span><div class="note">Panglao → Antequera 약 1시간.
     <b>Mag-Aso Falls</b> ₱20 + 주차 ₱15 · 197계단 5~10분 · 8m 낙차, 석회암 블루 웅덩이, 중간 전망대.
     <b>Kawasan Falls(Bohol)</b> ₱20 · 같은 마을이라 묶어서 · 위쪽에 계단식 논, 옆으로 아바탄 강.
     <em>둘 다 매점이 없습니다 — 물·간식 필수.</em> 9월은 유량 최대인 대신 비 직후엔 흙탕이니 맑은 날 오후로<br>
     <span style="color:#e0a458">플랜B — 컨디션이 안 되면: Panglao 순환도로 43km 일주(1.5~2시간, 포장 좋고 차 없음) + Doljo Beach 일몰. Doljo는 <b>스노클링은 하지 마세요</b> — 벽이 있는 "Doljo Point"는 해안 8~15km 밖 보트 사이트고, 해변은 간조에 수영 불가입니다</span></div></td></tr>
-    <tr class="food"><td class="t">19:00</td><td><span class="place">저녁 — Bohol Don Panglao 삼겹살 & 프리미엄 코리안 BBQ<span class="pill p-kr">한식</span><span class="pill p-food">4.8 / 634</span></span><div class="note">Danao. <b>현지 한인 커뮤니티가 가는 집</b>. 김치찌개·순두부·와규, 밑반찬 넉넉. 비빔밥 ₱450 ~ 제육 ₱900<span class="ct"><b>+63 966 866 4049</b> · 11:00–23:00 매일 · FB: BOHOLDON2022</span></div></td></tr>
-    <tr class="spa"><td class="t">21:00</td><td><span class="place">마사지 — Nirvana Thai Massage & Spa<span class="pill p-spa">₱650/시간</span></span><div class="note">순환도로, 맥도날드 근처. 11:00–22:30. <b>이번 목록에서 늦은 영업 + 실제 전화번호가 둘 다 확인된 유일한 스파</b>입니다. 타이·발·페이셜 시간당 ₱650, 핫스톤도 있음. <b>호텔 픽업/드롭 서비스</b> 제공<span class="ct"><b>+63 962 544 9962</b> · nirvanathaimassage.ph (이메일 예약폼) · FB: nirvana.panglao<br>더 늦게까지 필요하면 — Thai Royale Panglao(01:00까지, 온라인 예약, 전화 <span class="nv">미확인</span>) · Nuat Thai Tawala(24:00, 전화 <span class="nv">미확인</span>) · Alona Bliss <b>+63 38 427 2846</b>(24:00)</span></div></td></tr>
+    <tr class="food"><td class="t">19:00</td><td><span class="place">저녁 — Bohol Don Panglao 삼겹살 & 프리미엄 코리안 BBQ<span class="pill p-kr">한식</span><span class="pill p-food">4.8 / 634</span></span><div class="note">Danao. <b>현지 한인 커뮤니티가 가는 집</b>. 김치찌개·순두부·와규, 밑반찬 넉넉. 비빔밥 ₱450 ~ 제육 ₱900<span class="ct"><b><a class="tel" href="tel:+639668664049">+63 966 866 4049</a></b> · 11:00–23:00 매일 · FB: BOHOLDON2022</span></div></td></tr>
+    <tr class="spa"><td class="t">21:00</td><td><span class="place">마사지 — Nirvana Thai Massage & Spa<span class="pill p-spa">₱650/시간</span></span><div class="note">순환도로, 맥도날드 근처. 11:00–22:30. <b>이번 목록에서 늦은 영업 + 실제 전화번호가 둘 다 확인된 유일한 스파</b>입니다. 타이·발·페이셜 시간당 ₱650, 핫스톤도 있음. <b>호텔 픽업/드롭 서비스</b> 제공<span class="ct"><b><a class="tel" href="tel:+639625449962">+63 962 544 9962</a></b> · nirvanathaimassage.ph (이메일 예약폼) · FB: nirvana.panglao<br>더 늦게까지 필요하면 — Thai Royale Panglao(01:00까지, 온라인 예약, 전화 <span class="nv">미확인</span>) · Nuat Thai Tawala(24:00, 전화 <span class="nv">미확인</span>) · Alona Bliss <b><a class="tel" href="tel:+63384272846">+63 38 427 2846</a></b>(24:00)</span></div></td></tr>
     <tr class="rest"><td class="t">22:30</td><td><span class="place">취침 · <b>오토바이는 숙소 주차장에 반납</b></span><div class="note"><b>05:20에 여는 렌탈샵은 없습니다.</b> 오늘 밤 숙소에 세워두고 열쇠를 프런트에 맡기세요 — Alona Austria는 24시간 프런트·경비라 가능합니다. 예약할 때 <b>"9/15 오전 호텔에서 회수"</b>를 미리 합의해 두시고요. <em>보증금·여권을 잡지 않는 업체를 골라야 하는 이유가 이겁니다 — 새벽에 돌려받을 방법이 없습니다.</em><br>
  Siquijor 2박용 소형 백 별도 패킹. <b>내일 조식용 샌드위치를 오늘 밤에 사두세요</b> — Alona La Isla Blu 건물의 <b>Bready To Go</b>와 <b>CRAZE 24시 키오스크</b>가 24시간입니다</div></td></tr>
   </table>
 </div>
 
 <!-- DAY 2 -->
-<div class="day">
+<div class="day" id="d15">
   <div class="dayhead">
     <span class="dnum">DAY 2</span><span class="ddate">9/15 (화)</span>
     <span class="dtheme">Siquijor 이동 → Lugnason Falls · Paliton 선셋</span>
@@ -508,20 +526,20 @@
     <tr class="rest"><td class="t">04:50</td><td><span class="place">기상 · 체크아웃</span><div class="note">오토바이는 어젯밤에 이미 세워뒀고 열쇠도 맡겼으니 그대로 나가시면 됩니다. 계산은 <b>9/14 밤에 미리 정산</b>해두면 05:00 체크아웃이 열쇠만 놓고 나가는 게 됩니다<br><b>9/17 저녁 Amorita 재배달</b>도 렌탈샵에 같이 예약해 두세요</div></td></tr>
     <tr class="move"><td class="t">05:20</td><td><span class="place">→ Tagbilaran City Port</span><div class="note"><b>공항이 아니라 항구</b>입니다. Alona에서 25~30분. 밴·그랩 ₱450~550 — <b>전날 밤에 차량 예약</b>(프런트에 요청)</div></td></tr>
     <tr class="food"><td class="t">05:55</td><td><span class="place">체크인 · 전날 산 샌드위치로 조식</span><div class="note">출항 1시간 전 체크인 권장. 이 시간 항구엔 먹을 게 없습니다</div></td></tr>
-    <tr class="move"><td class="t">07:00</td><td><span class="place">OceanJet 출항 → Siquijor (약 2시간)</span><div class="note"><em>공표는 07:30 출항 / 09:30 도착 — 보유 티켓의 07:00과 대조하세요</em><span class="ct">OceanJet <b>+63 32 255 7560</b> · 모바일 <b>+63 917 638 0000</b> · oceanjet.net · Siquijor 사무소 +63 919 066 5964 · 지원 평일 05:00–19:00</span></div></td></tr>
-    <tr class="move"><td class="t">09:00</td><td><span class="place">Siquijor Port 도착 · 오토바이 인수<span class="pill p-moto">₱300~500/일</span></span><div class="note">짐이 있으니 숙소까지는 트라이시클, 스쿠터는 Coco Grove 배달이 편합니다. <b>인수 시 사방 사진</b> 필수<span class="ct">Island Diaries <b>+63 906 713 9620</b> (WhatsApp 동일) · 배달+회수 ₱300 · islanddiariesph.com<br>Mango Rentals <b>+63 945 513 3998</b> · ₱350/일, 3~7일 ₱300/일</span></div></td></tr>
+    <tr class="move"><td class="t">07:00</td><td><span class="place">OceanJet 출항 → Siquijor (약 2시간)</span><div class="note"><em>공표는 07:30 출항 / 09:30 도착 — 보유 티켓의 07:00과 대조하세요</em><span class="ct">OceanJet <b><a class="tel" href="tel:+63322557560">+63 32 255 7560</a></b> · 모바일 <b><a class="tel" href="tel:+639176380000">+63 917 638 0000</a></b> · oceanjet.net · Siquijor 사무소 <a class="tel" href="tel:+639190665964">+63 919 066 5964</a> · 지원 평일 05:00–19:00</span></div></td></tr>
+    <tr class="move"><td class="t">09:00</td><td><span class="place">Siquijor Port 도착 · 오토바이 인수<span class="pill p-moto">₱300~500/일</span></span><div class="note">짐이 있으니 숙소까지는 트라이시클, 스쿠터는 Coco Grove 배달이 편합니다. <b>인수 시 사방 사진</b> 필수<span class="ct">Island Diaries <b><a class="tel" href="tel:+639067139620">+63 906 713 9620</a></b> (WhatsApp 동일) · 배달+회수 ₱300 · islanddiariesph.com<br>Mango Rentals <b><a class="tel" href="tel:+639455133998">+63 945 513 3998</a></b> · ₱350/일, 3~7일 ₱300/일</span></div></td></tr>
     <tr class="move"><td class="t">09:40</td><td><span class="place">→ Coco Grove (20~30분)</span></td></tr>
-    <tr class="food"><td class="t">11:00</td><td><span class="place">점심 — Salamandas (Coco Grove 3번 게이트)<span class="pill p-food">4.9 / 1,152</span></span><div class="note">San Juan 49개 식당 중 1위. 리조트 부속인데 섬 최상위입니다 — <b>비프 타파가 섬 최고</b>라는 평. 모래 위 테이블<span class="ct"><b>+63 917 316 9410</b> / +63 939 936 0522 · 06:00–22:00 (조식 06:00–10:00)<br><em>투숙객은 괜찮지만 외부 손님은 예약 필수라고 리조트가 명시</em></span></div></td></tr>
+    <tr class="food"><td class="t">11:00</td><td><span class="place">점심 — Salamandas (Coco Grove 3번 게이트)<span class="pill p-food">4.9 / 1,152</span></span><div class="note">San Juan 49개 식당 중 1위. 리조트 부속인데 섬 최상위입니다 — <b>비프 타파가 섬 최고</b>라는 평. 모래 위 테이블<span class="ct"><b><a class="tel" href="tel:+639173169410">+63 917 316 9410</a></b> / <a class="tel" href="tel:+639399360522">+63 939 936 0522</a> · 06:00–22:00 (조식 06:00–10:00)<br><em>투숙객은 괜찮지만 외부 손님은 예약 필수라고 리조트가 명시</em></span></div></td></tr>
     <tr class="rest"><td class="t">12:30–14:15</td><td><span class="place">체크인 · 휴식</span><div class="note">Siquijor 9월은 <b>13시경 구름 → 15~17시 소나기 30~90분 → 저녁 갬</b>이 표준입니다. 오후에 물놀이를 넣지 않는 이유</div></td></tr>
     <tr class="ride"><td class="t">14:45–16:30</td><td><span class="place">Lugnason Falls (Brgy. Napo, San Juan)<span class="pill p-moto">15~20분</span></span><div class="note"><b>무료</b>, 주차 ₱10~20, 17:00까지. 수심 5m 소(沼)라 다이빙 가능. 짧고 쉬운 산길. 소나기가 와도 상관없습니다<br><em>체력 남으면 Zodiac Falls까지 정글 트레킹 편도 30~40분</em></div></td></tr>
     <tr class="hero"><td class="t">17:00–17:50</td><td><span class="place">Paliton Beach — 일몰 (17:47)</span><div class="note">Coco Grove에서 10분, 입장 ₱20. <b>스노클링은 하지 마세요</b> — 해초밭에 성게라 볼 게 없습니다. 유명한 Paliton Wall은 <b>보트 전용</b>이라 해안에서 헤엄쳐 못 갑니다. 순수하게 섬 최고 선셋 자리<br><em>대안: Bucafe (San Juan 위 언덕, 네트 테라스에서 Negros 조망 — 40분 전 도착해야 자리 있음)</em></div></td></tr>
-    <tr class="food"><td class="t">18:45</td><td><span class="place">저녁 — Dolce Amore (Paliton, San Juan)<span class="pill p-food">4.9 / 683</span></span><div class="note">섬에서 가장 평이 좋은 이탈리안. 수제 스터프드 파스타. ₱300~500+<span class="ct"><b>+63 939 111 5810</b> · 08:00–21:00 · IG @dolceamoresiquijor · 순환도로 Paliton<br>대안 — Luca Loko <b>+63 906 213 8840</b> (Maite, 08:00–24:00, 부다볼·뇨키) · Tahanan <b>+63 977 362 4382</b> (Solangon 발코니, 피자 절반값)</span></div></td></tr>
-    <tr class="spa"><td class="t">20:30</td><td><span class="place">마사지 — The Temple Spa (Coco Grove 구내)<span class="pill p-spa">5.0 / 420+</span></span><div class="note">San Juan 스파 1위 · <b>Travelers' Choice 2026</b>. 10:00–22:00. 방에서 50m. 스웨디시·전통 힐롯·핫스톤·허벌 아로마·벤토사·East&West(스웨디시+타이) 60/90분<span class="ct"><b>+63 917 314 1415</b> (Globe·WhatsApp) / <b>+63 969 521 5658</b> (Smart)<br><em>요금 미공개 — "문의 바람"이 공식 입장. 리조트 내 통신이 약하니 <b>왓츠앱으로 미리</b> 잡으세요. 바디스크럽은 사전 예약 또는 30분 준비 필요</em></span></div></td></tr>
+    <tr class="food"><td class="t">18:45</td><td><span class="place">저녁 — Dolce Amore (Paliton, San Juan)<span class="pill p-food">4.9 / 683</span></span><div class="note">섬에서 가장 평이 좋은 이탈리안. 수제 스터프드 파스타. ₱300~500+<span class="ct"><b><a class="tel" href="tel:+639391115810">+63 939 111 5810</a></b> · 08:00–21:00 · IG @dolceamoresiquijor · 순환도로 Paliton<br>대안 — Luca Loko <b><a class="tel" href="tel:+639062138840">+63 906 213 8840</a></b> (Maite, 08:00–24:00, 부다볼·뇨키) · Tahanan <b><a class="tel" href="tel:+639773624382">+63 977 362 4382</a></b> (Solangon 발코니, 피자 절반값)</span></div></td></tr>
+    <tr class="spa"><td class="t">20:30</td><td><span class="place">마사지 — The Temple Spa (Coco Grove 구내)<span class="pill p-spa">5.0 / 420+</span></span><div class="note">San Juan 스파 1위 · <b>Travelers' Choice 2026</b>. 10:00–22:00. 방에서 50m. 스웨디시·전통 힐롯·핫스톤·허벌 아로마·벤토사·East&West(스웨디시+타이) 60/90분<span class="ct"><b><a class="tel" href="tel:+639173141415">+63 917 314 1415</a></b> (Globe·WhatsApp) / <b><a class="tel" href="tel:+639695215658">+63 969 521 5658</a></b> (Smart)<br><em>요금 미공개 — "문의 바람"이 공식 입장. 리조트 내 통신이 약하니 <b>왓츠앱으로 미리</b> 잡으세요. 바디스크럽은 사전 예약 또는 30분 준비 필요</em></span></div></td></tr>
   </table>
 </div>
 
 <!-- DAY 3 -->
-<div class="day">
+<div class="day" id="d16">
   <div class="dayhead">
     <span class="dnum">DAY 3</span><span class="ddate">9/16 (수)</span>
     <span class="dtheme">★ 링로드 72km 일주 — Tulapos(간조) + Salagdoong(만조) + Lazi</span>
@@ -541,19 +559,19 @@
     <b>5m·10m 콘크리트 점프대는 만조에만 개방</b>(안전요원 상주)인데, 오늘 만조가 13:30(1.13m)입니다. <b>점프를 하실 거면 스노클을 먼저 하고 12:30 이후에 점프대로 가세요.</b> 오늘 만조는 1.13m로 주중 낮은 편이라 안전요원 판단을 반드시 따르시고요.<br>
     <em>해변까지 급경사 — 짐은 한 번에 들고 내려가세요.</em> 섬에서 가장 붐비는 해변이니 오전에 끝내는 게 맞습니다
     <span class="ct">조위 11:00 <b>≈0.87m</b> → 13:15 <b>≈1.12m</b> (만조 13:30, 1.13m)</span></div></td></tr>
-    <tr class="food"><td class="t">13:30</td><td><span class="place">점심 — Salagdoong Cafe 또는 Maria carinderia</span><div class="note">해변 카페 ₱200~350 / 현지 carinderia ₱80~150<span class="ct"><em>한식 옵션 — Lazi의 <b>Marichris Samgyeopsal</b>: 무한 삼겹 ₱199/인, 김치볶음밥 ₱99, 직접 담근 김치. <b>+63 977 014 4152</b> · 월~토 11:00–20:00 (수요일 정상영업, 일요일 휴무) · Brgy. Mahogany St., Lazi. 코스상 14시대에 Lazi를 지나가니 점심을 늦춰 여기서 드셔도 됩니다</em></span></div></td></tr>
+    <tr class="food"><td class="t">13:30</td><td><span class="place">점심 — Salagdoong Cafe 또는 Maria carinderia</span><div class="note">해변 카페 ₱200~350 / 현지 carinderia ₱80~150<span class="ct"><em>한식 옵션 — Lazi의 <b>Marichris Samgyeopsal</b>: 무한 삼겹 ₱199/인, 김치볶음밥 ₱99, 직접 담근 김치. <b><a class="tel" href="tel:+639770144152">+63 977 014 4152</a></b> · 월~토 11:00–20:00 (수요일 정상영업, 일요일 휴무) · Brgy. Mahogany St., Lazi. 코스상 14시대에 Lazi를 지나가니 점심을 늦춰 여기서 드셔도 됩니다</em></span></div></td></tr>
     <tr class="ride"><td class="t">14:15</td><td><span class="place">→ Lazi (Maria→Lazi 14km / 20분)</span><span class="pill p-moto">최고 경관 구간</span><div class="note">현지 라이더들이 <b>"섬에서 가장 아름다운 구간"</b>으로 꼽는 야자수 해안도로</div></td></tr>
     <tr class="ride"><td class="t">14:45–15:50</td><td><span class="place">Cambugahay Falls (Lazi)</span><div class="note">₱20~50 + 로프스윙 ₱50(무제한) + 주차 ₱10 · 07:00–17:00. 계단식 터키석 웅덩이, 대나무 뗏목. 원래 08시 전이 크라우드 회피 타이밍이지만 <b>9월 비수기라 오후도 견딜 만합니다.</b> 우기라 유량 최대<br><em>더 한산한 대안: <b>Lagaan Falls(Lagaan)</b> ₱30 — 스윙 여러 개 + 바위 점프, 15분 우림 트레일</em></div></td></tr>
     <tr class="ride"><td class="t">16:00–16:30</td><td><span class="place">Lazi Church & 수도원</span><div class="note"><b>무료</b>(박물관 ₱20). 섬에서 가장 오래되고 큰 교회, 유네스코 잠정목록. Cambugahay에서 3km/5분</div></td></tr>
     <tr class="ride"><td class="t">16:45–17:10</td><td><span class="place">오래된 Balete Tree</span><div class="note">₱20~50 (도로에서 보는 건 무료), 발 어항 포함 옵션. San Juan까지 내륙 산길 20분 — <b>이 구간이 오늘 라이딩의 마무리</b>. 평일이라 한산할 것</div></td></tr>
     <tr class="move"><td class="t">17:35</td><td><span class="place">San Juan 복귀 (일몰 17:47 전)</span><div class="note"><b>야간 라이딩 금지</b> — 가로등 없고 개가 뛰어들며 커브에 모래가 깔립니다</div></td></tr>
-    <tr class="food"><td class="t">18:45</td><td><span class="place">저녁 — Baha Ba'r (Maite, San Juan)<span class="pill p-food">4.3 / 872</span></span><div class="note">화덕 피자, 가지 샐러드, 크래프트 비어, 제대로 된 아라비카. ₱300~400. 글루텐프리·비건 대응<span class="ct"><b>+63 930 865 6180</b> / +63 918 929 4320 · 11:00–23:00 · baha-bar.com<br><em>한식이 당기면 <b>Larich Korean Grill House</b> (San Juan) — 페이스북 페이지만 확인됩니다. 주소·전화·영업시간 <span class="nv">전부 미확인</span>이니 <b>FB 메시지로 미리 물어보세요</b></em></span></div></td></tr>
-    <tr class="spa"><td class="t">20:45</td><td><span class="place">마사지 — Siquijor Massage (Maite, 순환도로)<span class="pill p-spa">₱299 / 60분</span></span><div class="note">4.5/17. <b>60분 ₱299, 90분 ₱525</b> — 가격 대비 최강이고 "필리핀에서 받은 최고의 마사지"라는 후기가 여럿. 타이·발반사·시아츠·전통 Siquijor 마사지<br><b>수요일이라 23:00까지 영업합니다</b>(평일 10:00–23:00 / 주말 10:00–21:00). 워크인 또는 페이스북 메시지로 예약 — 매우 붐비니 <b>당일 아침에 미리 잡아두세요</b><span class="ct"><b>+63 906 059 2793</b> · FB: siquijormassage1 · National Rd, Maite, San Juan</span></div></td></tr>
+    <tr class="food"><td class="t">18:45</td><td><span class="place">저녁 — Baha Ba'r (Maite, San Juan)<span class="pill p-food">4.3 / 872</span></span><div class="note">화덕 피자, 가지 샐러드, 크래프트 비어, 제대로 된 아라비카. ₱300~400. 글루텐프리·비건 대응<span class="ct"><b><a class="tel" href="tel:+639308656180">+63 930 865 6180</a></b> / <a class="tel" href="tel:+639189294320">+63 918 929 4320</a> · 11:00–23:00 · baha-bar.com<br><em>한식이 당기면 <b>Larich Korean Grill House</b> (San Juan) — 페이스북 페이지만 확인됩니다. 주소·전화·영업시간 <span class="nv">전부 미확인</span>이니 <b>FB 메시지로 미리 물어보세요</b></em></span></div></td></tr>
+    <tr class="spa"><td class="t">20:45</td><td><span class="place">마사지 — Siquijor Massage (Maite, 순환도로)<span class="pill p-spa">₱299 / 60분</span></span><div class="note">4.5/17. <b>60분 ₱299, 90분 ₱525</b> — 가격 대비 최강이고 "필리핀에서 받은 최고의 마사지"라는 후기가 여럿. 타이·발반사·시아츠·전통 Siquijor 마사지<br><b>수요일이라 23:00까지 영업합니다</b>(평일 10:00–23:00 / 주말 10:00–21:00). 워크인 또는 페이스북 메시지로 예약 — 매우 붐비니 <b>당일 아침에 미리 잡아두세요</b><span class="ct"><b><a class="tel" href="tel:+639060592793">+63 906 059 2793</a></b> · FB: siquijormassage1 · National Rd, Maite, San Juan</span></div></td></tr>
   </table>
 </div>
 
 <!-- DAY 4 -->
-<div class="day">
+<div class="day" id="d17">
   <div class="dayhead">
     <span class="dnum">DAY 4</span><span class="ddate">9/17 (목)</span>
     <span class="dtheme">Caticugan 새벽 세션 → Panglao 복귀</span>
@@ -571,13 +589,13 @@
     <span class="ct">조위 07:00 <b>≈0.66m</b> → 08:26 <b>0.55m</b> (저조)</span></div></td></tr>
     <tr class="food"><td class="t">09:30</td><td><span class="place">조식 — Salamandas (복귀 후)</span></td></tr>
     <tr class="rest"><td class="t">10:45</td><td><span class="place">샤워 · 체크아웃 · 오토바이 반납</span></td></tr>
-    <tr class="food"><td class="t">11:45</td><td><span class="place">점심 — Sunset Restaurant (Coco Grove)<span class="pill p-food">4.9 / 499</span></span><div class="note">필리핀식+지중해식. 마지막 식사는 짐 옆에서 편하게<span class="ct">Coco Grove 대표번호 <b>+63 917 314 1415</b> / +63 969 521 5658</span></div></td></tr>
+    <tr class="food"><td class="t">11:45</td><td><span class="place">점심 — Sunset Restaurant (Coco Grove)<span class="pill p-food">4.9 / 499</span></span><div class="note">필리핀식+지중해식. 마지막 식사는 짐 옆에서 편하게<span class="ct">Coco Grove 대표번호 <b><a class="tel" href="tel:+639173141415">+63 917 314 1415</a></b> / <a class="tel" href="tel:+639695215658">+63 969 521 5658</a></span></div></td></tr>
     <tr class="move"><td class="t">12:45</td><td><span class="place">→ Siquijor Port (30~35분, 짐 포함)</span></td></tr>
     <tr class="move"><td class="t">13:20</td><td><span class="place">항구 체크인</span><div class="note">공표 <b>14:30 출항</b> — 티켓의 14:00과 대조. <em>9월은 habagat 결항 리스크가 실재합니다. 전날 밤 OceanJet SNS 확인</em></div></td></tr>
     <tr class="move"><td class="t">14:30–16:30</td><td><span class="place">OceanJet → Tagbilaran</span></td></tr>
-    <tr class="move"><td class="t">17:00</td><td><span class="place">Amorita 체크인 · Panglao 오토바이 재인수</span><div class="note">사전 예약분을 리조트로 배달 요청. 내일 06:30에 바로 출발해야 합니다<span class="ct">Amorita <b>+63 38 502 9003</b> / 모바일 <b>+63 917 726 4526</b> · #1 Ester A. Lim Drive, Tawala<br><em>레이트 체크아웃 정책·요금은 어디에도 공표돼 있지 않습니다 — 체크인할 때 직접 요청하세요</em></span></div></td></tr>
+    <tr class="move"><td class="t">17:00</td><td><span class="place">Amorita 체크인 · Panglao 오토바이 재인수</span><div class="note">사전 예약분을 리조트로 배달 요청. 내일 06:30에 바로 출발해야 합니다<span class="ct">Amorita <b><a class="tel" href="tel:+63385029003">+63 38 502 9003</a></b> / 모바일 <b><a class="tel" href="tel:+639177264526">+63 917 726 4526</a></b> · #1 Ester A. Lim Drive, Tawala<br><em>레이트 체크아웃 정책·요금은 어디에도 공표돼 있지 않습니다 — 체크인할 때 직접 요청하세요</em></span></div></td></tr>
     <tr><td class="t">17:40</td><td><span class="place">Amorita 절벽 일몰 (17:44)</span><div class="note">Alona를 내려다보는 자리. Azotea에서 칵테일</div></td></tr>
-    <tr class="food"><td class="t">19:00</td><td><span class="place">저녁 — Garlic 'n Lemon Bistro (Ester Lim Dr)<span class="pill p-food">4.7 / 2,981</span></span><div class="note">Panglao에서 <b>평점과 표본 수를 동시에 만족하는 유일한 집</b>. 갈릭버터 슈림프, 크리미 스파이시 갈릭 치킨<span class="ct"><b>+63 947 488 3254</b> · 11:00–22:00 · <b>예약 받습니다</b><br>대안 — Sisa Bistro <b>+63 920 486 9817</b> (4.7/589, New Airport Rd, 11:00–21:00, 좌석 적어 예약 권장)</span></div></td></tr>
+    <tr class="food"><td class="t">19:00</td><td><span class="place">저녁 — Garlic 'n Lemon Bistro (Ester Lim Dr)<span class="pill p-food">4.7 / 2,981</span></span><div class="note">Panglao에서 <b>평점과 표본 수를 동시에 만족하는 유일한 집</b>. 갈릭버터 슈림프, 크리미 스파이시 갈릭 치킨<span class="ct"><b><a class="tel" href="tel:+639474883254">+63 947 488 3254</a></b> · 11:00–22:00 · <b>예약 받습니다</b><br>대안 — Sisa Bistro <b><a class="tel" href="tel:+639204869817">+63 920 486 9817</a></b> (4.7/589, New Airport Rd, 11:00–21:00, 좌석 적어 예약 권장)</span></div></td></tr>
     <tr class="spa"><td class="t">20:15</td><td><span class="place">마사지 — Luna Tiger Spa (Alona점)<span class="pill p-spa">4.9 / 235</span></span><div class="note">Panglao <b>최고 평점 스파</b>. Alona점 13:00–21:45라 <b>20:00~20:15 시작이 마지노선</b>입니다.<br>
     <b>인스타그램 DM이 주 예약 경로</b>지만 — <b>Fresha에서 온라인 예약이 됩니다.</b> 이쪽이 확실합니다.
     타이거 오일 전신 <b>₱1,400</b> (1~2시간) · 구아샤 전신 <b>₱2,100</b> (1.5~2시간) · 발 <b>₱1,200</b>
@@ -586,7 +604,7 @@
 </div>
 
 <!-- DAY 5 -->
-<div class="day">
+<div class="day" id="d18">
   <div class="dayhead">
     <span class="dnum">DAY 5</span><span class="ddate">9/18 (금)</span>
     <span class="dtheme">Danao Wall + Kalipayan → 풀사이드 → 자정 출국</span>
@@ -604,13 +622,13 @@
     <tr class="hero"><td class="t">09:20–10:30</td><td><span class="place">Kalipayan Beach — 마지막 세션<span class="pill p-new">처음</span><span class="pill p-shore">해변에서 헤엄</span></span><div class="note"><b>남쪽 해안에서 유일하게 해변에서 헤엄쳐 닿는 리프</b>입니다. <b>3m에서 시작해 20m로</b> 떨어지고, 현지 자료가 "보통 잔잔하고 조류 없음"이라고 명시합니다. 바위가 섞인 작은 모래 만이라 Alona에서 걸어서도 갑니다.<br>
     리프 상단이 3m라 <b>오늘 같은 저조에도 문제없습니다.</b> 귀국일 마무리로 딱 맞는 난이도
     <span class="ct">조위 09:20 <b>≈0.64m</b> (저조 09:26 직후) → 10:30 <b>≈0.70m</b></span></div></td></tr>
-    <tr class="food"><td class="t">11:00</td><td><span class="place">조식 — Namoo Cafe (Namoo Cafe)<span class="pill p-kr">한식</span><span class="pill p-food">4.8 / 1,200</span></span><div class="note">한국인 운영. <b>김치볶음밥 · 돈까스 · 망고 빙수</b>. 물놀이 끝내고 얼큰한 걸로<span class="ct"><b>+63 960 360 7197</b> · 08:00–22:00 · IG @namoo_in_bohol · Purok 5, Panglao</span></div></td></tr>
+    <tr class="food"><td class="t">11:00</td><td><span class="place">조식 — Namoo Cafe (Namoo Cafe)<span class="pill p-kr">한식</span><span class="pill p-food">4.8 / 1,200</span></span><div class="note">한국인 운영. <b>김치볶음밥 · 돈까스 · 망고 빙수</b>. 물놀이 끝내고 얼큰한 걸로<span class="ct"><b><a class="tel" href="tel:+639603607197">+63 960 360 7197</a></b> · 08:00–22:00 · IG @namoo_in_bohol · Purok 5, Panglao</span></div></td></tr>
     <tr class="rest"><td class="t">12:00</td><td><span class="place">Amorita 복귀 · 샤워 · <b>장비 완전 건조 시작</b></span><div class="note">젖은 슈트·핀은 무게와 냄새 모두 문제입니다. 오후 내내 볕에</div></td></tr>
-    <tr class="food"><td class="t">12:45</td><td><span class="place">점심 — Bougainvillea Spanish (Alona 주차장 옆)<span class="pill p-food">4.5 / 764</span></span><div class="note"><b>금요일이라 런치가 열립니다</b> — 월~목은 저녁만이라 <b>이번 일정에서 유일하게 가능한 날</b>입니다. 바닥이 바삭한 파에야, 뿔뽀 가예가, 감바스, 츄러스<span class="ct"><b>+63 938 599 2467</b> · 금~일 12:00–14:30 & 17:00–21:30 / 월~목 17:00–21:30<br>대안 — Amorita 구내 <b>Tomar</b>(타파스·해산물) 또는 <b>The Lost Cow</b>(스테이크·훈제육)</span></div></td></tr>
+    <tr class="food"><td class="t">12:45</td><td><span class="place">점심 — Bougainvillea Spanish (Alona 주차장 옆)<span class="pill p-food">4.5 / 764</span></span><div class="note"><b>금요일이라 런치가 열립니다</b> — 월~목은 저녁만이라 <b>이번 일정에서 유일하게 가능한 날</b>입니다. 바닥이 바삭한 파에야, 뿔뽀 가예가, 감바스, 츄러스<span class="ct"><b><a class="tel" href="tel:+639385992467">+63 938 599 2467</a></b> · 금~일 12:00–14:30 & 17:00–21:30 / 월~목 17:00–21:30<br>대안 — Amorita 구내 <b>Tomar</b>(타파스·해산물) 또는 <b>The Lost Cow</b>(스테이크·훈제육)</span></div></td></tr>
     <tr class="rest"><td class="t">14:00–16:45</td><td><span class="place">Amorita 인피니티풀 · 레이트 체크아웃</span><div class="note">레이트 체크아웃은 <b>사전 협의 필수</b>. 공표된 정책이 없으니 체크인할 때 직접 요청하세요. 안 되면 짐 보관 + 샤워 이용으로 조율</div></td></tr>
     <tr class="spa"><td class="t">17:00–18:30</td><td><span class="place">마사지 — Sea Tree Spa (Amorita 구내)<span class="pill p-spa">4.9 / 450</span></span><div class="note">10:00–21:00. 마지막 밤은 이동 없이. <b>이번 일정에서 요금이 완전히 공개된 유일한 스파</b>입니다<br>
     Maharlika 시그니처 90분 <b>₱2,650</b> · Sikatuna 딥티슈 90분 <b>₱2,100</b> · Hilot ug Ventosa 90분 <b>₱1,980</b> · Urduja 아로마 60/90분 ₱1,760/₱1,950 · Raja 오일 60분 <b>₱1,650</b> · Dailisan 건식 60분 ₱1,550 · Bituon(별 아래) 60분 <b>₱1,350</b> · Bagtak 발 60분 ₱1,100 · 스크럽+마사지+배스 120분 ₱3,200
-    <span class="ct"><b>+63 917 726 4526</b> / 리조트 +63 38 502 9003 · 핫스톤은 메뉴에 없습니다</span></div></td></tr>
+    <span class="ct"><b><a class="tel" href="tel:+639177264526">+63 917 726 4526</a></b> / 리조트 <a class="tel" href="tel:+63385029003">+63 38 502 9003</a> · 핫스톤은 메뉴에 없습니다</span></div></td></tr>
     <tr class="food"><td class="t">19:00</td><td><span class="place">저녁 — Saffron (Amorita 절벽)<span class="pill p-food">4.6 / 416</span></span><div class="note">케이준 살몬 스킬렛, 절벽 오션뷰. 이 목록에서 가장 비싸지만 마지막 밤 값은 합니다<span class="ct">예약은 리조트 대표번호로 — Amorita는 레스토랑별 직통번호를 공개하지 않습니다<br>가볍게 — Sushihan 4.6/435 (Tawala) · WOnDERLAND 타이 4.7/1,296</span></div></td></tr>
     <tr class="move"><td class="t">21:30</td><td><span class="place">→ Bohol-Panglao International Airport (20분) · 오토바이 반납</span></td></tr>
     <tr class="move"><td class="t">22:00</td><td><span class="place">공항 도착 · 체크인</span><div class="note">국제선 3시간 전 기준 — 실제 항공권 시각에 맞춰 조정</div></td></tr>
@@ -618,21 +636,21 @@
 </div>
 
 
-<h2>연락처 총정리</h2>
+<h2 id="contacts">연락처 총정리</h2>
 
 <h3 class="sec">마사지 · 스파</h3>
 <div class="card" style="padding:6px 12px 12px">
 <table class="ftable">
   <tr><th>이름</th><th>연락처</th><th>영업</th><th>요금</th><th>비고</th></tr>
-  <tr><td class="nm">Nirvana Thai Massage<br><span style="font-weight:400;color:var(--dimmer)">Panglao, 순환도로</span></td><td class="ph">+63 962 544 9962</td><td>11:00–22:30</td><td>₱650 / 시간</td><td>nirvanathaimassage.ph 예약폼 · <b>호텔 픽업/드롭 있음</b> · 늦은 영업 + 전화번호가 둘 다 확인된 유일한 곳</td></tr>
+  <tr><td class="nm">Nirvana Thai Massage<br><span style="font-weight:400;color:var(--dimmer)">Panglao, 순환도로</span></td><td class="ph"><a class="tel" href="tel:+639625449962">+63 962 544 9962</a></td><td>11:00–22:30</td><td>₱650 / 시간</td><td>nirvanathaimassage.ph 예약폼 · <b>호텔 픽업/드롭 있음</b> · 늦은 영업 + 전화번호가 둘 다 확인된 유일한 곳</td></tr>
   <tr><td class="nm">Luna Tiger Spa<br><span style="font-weight:400;color:var(--dimmer)">Alona점 / Tawala 본점</span></td><td class="ph">전화 <span class="nv">미확인</span></td><td>Alona 13:00–21:45<br>본점 13:00–22:00</td><td>전신 오일 ₱1,400<br>구아샤 ₱2,100<br>발 ₱1,200</td><td>IG <b>@tigerspa_bohol</b> · <b>Fresha 온라인 예약 가능</b>(IG DM보다 확실) · Panglao 최고 평점</td></tr>
-  <tr><td class="nm">Sea Tree Spa<br><span style="font-weight:400;color:var(--dimmer)">Amorita 구내</span></td><td class="ph">+63 917 726 4526<br>+63 38 502 9003</td><td>10:00–21:00</td><td>₱1,100 ~ ₱3,200<br>(본문 참조)</td><td>요금이 전부 공개된 유일한 스파 · 핫스톤 없음</td></tr>
-  <tr><td class="nm">Alona Bliss</td><td class="ph">+63 38 427 2846</td><td>12:00–24:00</td><td><span class="nv">미확인</span></td><td>번호 신뢰도 중간(OSM 출처) · 해변 오두막형이라 프라이버시 불만 많음</td></tr>
+  <tr><td class="nm">Sea Tree Spa<br><span style="font-weight:400;color:var(--dimmer)">Amorita 구내</span></td><td class="ph"><a class="tel" href="tel:+639177264526">+63 917 726 4526</a><br><a class="tel" href="tel:+63385029003">+63 38 502 9003</a></td><td>10:00–21:00</td><td>₱1,100 ~ ₱3,200<br>(본문 참조)</td><td>요금이 전부 공개된 유일한 스파 · 핫스톤 없음</td></tr>
+  <tr><td class="nm">Alona Bliss</td><td class="ph"><a class="tel" href="tel:+63384272846">+63 38 427 2846</a></td><td>12:00–24:00</td><td><span class="nv">미확인</span></td><td>번호 신뢰도 중간(OSM 출처) · 해변 오두막형이라 프라이버시 불만 많음</td></tr>
   <tr><td class="nm">Thai Royale Spa Panglao</td><td class="ph"><span class="nv">미확인</span></td><td>~01:00</td><td><span class="nv">미확인</span></td><td>thairoyalespabohol.com/panglao 온라인 예약 · 워크인 환영 · <b>가장 늦게까지</b></td></tr>
   <tr><td class="nm">Nuat Thai Tawala</td><td class="ph"><span class="nv">미확인</span></td><td>12:00–24:00</td><td>발 30분 ₱200</td><td>Coastal Road · FB nuatthaipanglao · 전국 프랜차이즈 지점 목록엔 Bohol이 없음</td></tr>
-  <tr><td class="nm">The Temple Spa<br><span style="font-weight:400;color:var(--dimmer)">Coco Grove, Siquijor</span></td><td class="ph">+63 917 314 1415 (WhatsApp)<br>+63 969 521 5658</td><td>10:00–22:00</td><td><span class="nv">미공개</span></td><td>San Juan 1위 · Travelers' Choice 2026 · <b>리조트 내 통신 약하니 왓츠앱으로</b></td></tr>
-  <tr><td class="nm">Siquijor Massage<br><span style="font-weight:400;color:var(--dimmer)">Maite, San Juan</span></td><td class="ph">+63 906 059 2793</td><td>월–금 10:00–23:00<br>토·일 10:00–21:00</td><td>60분 ₱299<br>90분 ₱525</td><td>FB siquijormassage1 · 워크인 또는 FB 메시지 · <b>매우 붐빔, 당일 아침에 미리</b></td></tr>
-  <tr><td class="nm">Secret Siquijor Spa<br><span style="font-weight:400;color:var(--dimmer)">Lazi</span></td><td class="ph">+63 917 706 9200<br>WhatsApp +63 976 371 0045</td><td>09:00–17:00</td><td><span class="nv">미확인</span></td><td><b>카와(가마솥) 목욕</b> + 힐롯, 오션뷰 · 낮에만 하니 9/16 링로드 코스에 끼울 수 있음</td></tr>
+  <tr><td class="nm">The Temple Spa<br><span style="font-weight:400;color:var(--dimmer)">Coco Grove, Siquijor</span></td><td class="ph"><a class="tel" href="tel:+639173141415">+63 917 314 1415</a> (WhatsApp)<br><a class="tel" href="tel:+639695215658">+63 969 521 5658</a></td><td>10:00–22:00</td><td><span class="nv">미공개</span></td><td>San Juan 1위 · Travelers' Choice 2026 · <b>리조트 내 통신 약하니 왓츠앱으로</b></td></tr>
+  <tr><td class="nm">Siquijor Massage<br><span style="font-weight:400;color:var(--dimmer)">Maite, San Juan</span></td><td class="ph"><a class="tel" href="tel:+639060592793">+63 906 059 2793</a></td><td>월–금 10:00–23:00<br>토·일 10:00–21:00</td><td>60분 ₱299<br>90분 ₱525</td><td>FB siquijormassage1 · 워크인 또는 FB 메시지 · <b>매우 붐빔, 당일 아침에 미리</b></td></tr>
+  <tr><td class="nm">Secret Siquijor Spa<br><span style="font-weight:400;color:var(--dimmer)">Lazi</span></td><td class="ph"><a class="tel" href="tel:+639177069200">+63 917 706 9200</a><br>WhatsApp <a class="tel" href="tel:+639763710045">+63 976 371 0045</a></td><td>09:00–17:00</td><td><span class="nv">미확인</span></td><td><b>카와(가마솥) 목욕</b> + 힐롯, 오션뷰 · 낮에만 하니 9/16 링로드 코스에 끼울 수 있음</td></tr>
 </table>
 </div>
 
@@ -640,22 +658,22 @@
 <div class="card" style="padding:6px 12px 12px">
 <table class="ftable">
   <tr><th>이름</th><th>연락처</th><th>영업</th><th>비고</th></tr>
-  <tr><td class="nm">Bohol Don Panglao BBQ <span class="pill p-kr" style="margin:0">한식</span></td><td class="ph">+63 966 866 4049</td><td>11:00–23:00</td><td>Danao · 4.8/634 · 현지 한인들이 가는 집</td></tr>
-  <tr><td class="nm">Namoo Cafe Namoo Cafe <span class="pill p-kr" style="margin:0">한식</span></td><td class="ph">+63 960 360 7197</td><td>08:00–22:00</td><td>Purok 5 · 4.8/1,200 · IG @namoo_in_bohol</td></tr>
-  <tr><td class="nm">Garlic 'n Lemon Bistro</td><td class="ph">+63 947 488 3254</td><td>11:00–22:00</td><td>Ester Lim Dr · 4.7/2,981 · <b>예약 받음</b></td></tr>
-  <tr><td class="nm">Sisa Bistro</td><td class="ph">+63 920 486 9817</td><td>11:00–21:00</td><td>New Airport Rd · 4.7/589 · 좌석 적음</td></tr>
-  <tr><td class="nm">Bougainvillea Spanish</td><td class="ph">+63 938 599 2467</td><td>금~일 12:00–14:30<br>매일 17:00–21:30</td><td>Alona 주차장 옆 · 4.5/764 · <b>월~목 런치 없음</b></td></tr>
+  <tr><td class="nm">Bohol Don Panglao BBQ <span class="pill p-kr" style="margin:0">한식</span></td><td class="ph"><a class="tel" href="tel:+639668664049">+63 966 866 4049</a></td><td>11:00–23:00</td><td>Danao · 4.8/634 · 현지 한인들이 가는 집</td></tr>
+  <tr><td class="nm">Namoo Cafe Namoo Cafe <span class="pill p-kr" style="margin:0">한식</span></td><td class="ph"><a class="tel" href="tel:+639603607197">+63 960 360 7197</a></td><td>08:00–22:00</td><td>Purok 5 · 4.8/1,200 · IG @namoo_in_bohol</td></tr>
+  <tr><td class="nm">Garlic 'n Lemon Bistro</td><td class="ph"><a class="tel" href="tel:+639474883254">+63 947 488 3254</a></td><td>11:00–22:00</td><td>Ester Lim Dr · 4.7/2,981 · <b>예약 받음</b></td></tr>
+  <tr><td class="nm">Sisa Bistro</td><td class="ph"><a class="tel" href="tel:+639204869817">+63 920 486 9817</a></td><td>11:00–21:00</td><td>New Airport Rd · 4.7/589 · 좌석 적음</td></tr>
+  <tr><td class="nm">Bougainvillea Spanish</td><td class="ph"><a class="tel" href="tel:+639385992467">+63 938 599 2467</a></td><td>금~일 12:00–14:30<br>매일 17:00–21:30</td><td>Alona 주차장 옆 · 4.5/764 · <b>월~목 런치 없음</b></td></tr>
   <tr><td class="nm">CRAZE Artisan Café</td><td class="ph"><span class="nv">미확인</span></td><td>07:00–23:00</td><td>칼텍스 Tawala · 4.9/1,445 · <b>현금·GCash만</b></td></tr>
   <tr><td class="nm">Bready To Go / CRAZE 키오스크</td><td class="ph"><span class="nv">미확인</span></td><td><b>24시간</b></td><td>La Isla Blu, Alona · 페리 조식 조달용</td></tr>
-  <tr><td class="nm">Amorita (Saffron / Tomar)</td><td class="ph">+63 38 502 9003<br>+63 917 726 4526</td><td>조식 06:00–10:00</td><td>레스토랑 직통번호 없음 — 대표번호로 예약<br><em>이전 안내의 "m.marinera"는 확인되지 않습니다. 현재 공식 아웃렛은 Saffron과 Tomar</em></td></tr>
-  <tr><td class="nm">Salamandas (Coco Grove)</td><td class="ph">+63 917 316 9410<br>+63 939 936 0522</td><td>06:00–22:00</td><td>4.9/1,152 · San Juan 1위 · 섬에서 유일한 06시 오픈</td></tr>
-  <tr><td class="nm">Dolce Amore</td><td class="ph">+63 939 111 5810</td><td>08:00–21:00</td><td>Paliton, San Juan · 4.9/683</td></tr>
-  <tr><td class="nm">Baha Ba'r</td><td class="ph">+63 930 865 6180<br>+63 918 929 4320</td><td>11:00–23:00</td><td>Maite · 4.3/872 · baha-bar.com</td></tr>
-  <tr><td class="nm">Luca Loko</td><td class="ph">+63 906 213 8840</td><td>08:00–24:00</td><td>Maite · 4.6/214 · 평균 ₱400~600</td></tr>
-  <tr><td class="nm">Tahanan</td><td class="ph">+63 977 362 4382</td><td><span class="nv">미확인</span></td><td>Solangon Beach 절벽 · 피자가 Dolce Amore 절반값</td></tr>
-  <tr><td class="nm">Marichris Samgyeopsal <span class="pill p-kr" style="margin:0">한식</span></td><td class="ph">+63 977 014 4152</td><td>월–토 11:00–20:00<br><b>일요일 휴무</b></td><td>Brgy. Mahogany St., Lazi · 무한 삼겹 ₱199 · 직접 담근 김치</td></tr>
+  <tr><td class="nm">Amorita (Saffron / Tomar)</td><td class="ph"><a class="tel" href="tel:+63385029003">+63 38 502 9003</a><br><a class="tel" href="tel:+639177264526">+63 917 726 4526</a></td><td>조식 06:00–10:00</td><td>레스토랑 직통번호 없음 — 대표번호로 예약<br><em>이전 안내의 "m.marinera"는 확인되지 않습니다. 현재 공식 아웃렛은 Saffron과 Tomar</em></td></tr>
+  <tr><td class="nm">Salamandas (Coco Grove)</td><td class="ph"><a class="tel" href="tel:+639173169410">+63 917 316 9410</a><br><a class="tel" href="tel:+639399360522">+63 939 936 0522</a></td><td>06:00–22:00</td><td>4.9/1,152 · San Juan 1위 · 섬에서 유일한 06시 오픈</td></tr>
+  <tr><td class="nm">Dolce Amore</td><td class="ph"><a class="tel" href="tel:+639391115810">+63 939 111 5810</a></td><td>08:00–21:00</td><td>Paliton, San Juan · 4.9/683</td></tr>
+  <tr><td class="nm">Baha Ba'r</td><td class="ph"><a class="tel" href="tel:+639308656180">+63 930 865 6180</a><br><a class="tel" href="tel:+639189294320">+63 918 929 4320</a></td><td>11:00–23:00</td><td>Maite · 4.3/872 · baha-bar.com</td></tr>
+  <tr><td class="nm">Luca Loko</td><td class="ph"><a class="tel" href="tel:+639062138840">+63 906 213 8840</a></td><td>08:00–24:00</td><td>Maite · 4.6/214 · 평균 ₱400~600</td></tr>
+  <tr><td class="nm">Tahanan</td><td class="ph"><a class="tel" href="tel:+639773624382">+63 977 362 4382</a></td><td><span class="nv">미확인</span></td><td>Solangon Beach 절벽 · 피자가 Dolce Amore 절반값</td></tr>
+  <tr><td class="nm">Marichris Samgyeopsal <span class="pill p-kr" style="margin:0">한식</span></td><td class="ph"><a class="tel" href="tel:+639770144152">+63 977 014 4152</a></td><td>월–토 11:00–20:00<br><b>일요일 휴무</b></td><td>Brgy. Mahogany St., Lazi · 무한 삼겹 ₱199 · 직접 담근 김치</td></tr>
   <tr><td class="nm">Larich Korean Grill House <span class="pill p-kr" style="margin:0">한식</span></td><td class="ph"><span class="nv">미확인</span></td><td><span class="nv">미확인</span></td><td>San Juan · <b>페이스북 페이지만 확인</b>(Larich Korean Grill House) · 트립어드바이저·구글맵 미등재 · TikTok @laricha48</td></tr>
-  <tr><td class="nm">Twenty4 Cafe</td><td class="ph">+63 975 802 4578<br>+63 917 110 0895</td><td><span class="nv">미확인</span></td><td>Catamboan, Lazi · 4.8/156 · ₱100~250 가성비</td></tr>
+  <tr><td class="nm">Twenty4 Cafe</td><td class="ph"><a class="tel" href="tel:+639758024578">+63 975 802 4578</a><br><a class="tel" href="tel:+639171100895">+63 917 110 0895</a></td><td><span class="nv">미확인</span></td><td>Catamboan, Lazi · 4.8/156 · ₱100~250 가성비</td></tr>
 </table>
 </div>
 
@@ -663,15 +681,15 @@
 <div class="card" style="padding:6px 12px 12px">
 <table class="ftable">
   <tr><th>이름</th><th>연락처</th><th>요금</th><th>비고</th></tr>
-  <tr><td class="nm">Bohol Motorcycle Rental</td><td class="ph">+63 917 503 0675</td><td>Click125 ₱600/일<br>Click150 ₱700 · NMAX ₱1,000</td><td>Tagbilaran East Rd 724 · <b>3일 이상 무료 호텔 배달</b></td></tr>
-  <tr><td class="nm">Panglao Motorcycle Rental</td><td class="ph">+63 956 831 3980<br>WhatsApp +63 917 503 0675</td><td>동일 계열</td><td>3일 이상 배달</td></tr>
+  <tr><td class="nm">Bohol Motorcycle Rental</td><td class="ph"><a class="tel" href="tel:+639175030675">+63 917 503 0675</a></td><td>Click125 ₱600/일<br>Click150 ₱700 · NMAX ₱1,000</td><td>Tagbilaran East Rd 724 · <b>3일 이상 무료 호텔 배달</b></td></tr>
+  <tr><td class="nm">Panglao Motorcycle Rental</td><td class="ph"><a class="tel" href="tel:+639568313980">+63 956 831 3980</a><br>WhatsApp <a class="tel" href="tel:+639175030675">+63 917 503 0675</a></td><td>동일 계열</td><td>3일 이상 배달</td></tr>
   <tr><td class="nm">BoholBikes</td><td class="ph"><span class="nv">미확인</span></td><td>Click125·Beat ₱350/일</td><td>boholbikes.com 온라인 예약 · 가장 저렴</td></tr>
-  <tr><td class="nm">Island Diaries (Siquijor)</td><td class="ph">+63 906 713 9620<br>(035) 419-2367</td><td>차종별 상이</td><td>배달+회수 ₱300 · 항구 픽업은 예약 시 확인</td></tr>
-  <tr><td class="nm">Mango Rentals (Siquijor)</td><td class="ph">+63 945 513 3998</td><td>₱350/일 · 3~7일 ₱300</td><td>FB mangorentalssiquijor</td></tr>
-  <tr><td class="nm">OceanJet</td><td class="ph">+63 32 255 7560<br>+63 917 638 0000<br>Siquijor +63 919 066 5964</td><td>₱950~1,450</td><td>oceanjet.net · 지원 평일 05:00–19:00 / 주말 06:00–17:00 · Messenger m.me/oceanjet</td></tr>
-  <tr><td class="nm">Bohol Beach Club</td><td class="ph">+63 38 411 0482<br>+63 927 452 7054</td><td>데이유즈 성인 ₱1,000<br>(₱650 F&B 환급)</td><td>09:00–17:00 수영장·해변만 · <b>만실이면 워크인 거절 — 전화 필수</b> · 체크인 15:00 / 체크아웃 12:00 · 프런트 24시간</td></tr>
-  <tr><td class="nm">Amorita 리조트</td><td class="ph">+63 38 502 9003<br>+63 917 726 4526<br>예약 +63 917 861 9441</td><td>—</td><td>#1 Ester A. Lim Dr, Tawala · inquiries@amoritaresort.com · <b>레이트 체크아웃 정책 미공표</b></td></tr>
-  <tr><td class="nm">Coco Grove</td><td class="ph">+63 917 314 1415<br>+63 969 521 5658<br>Casa Coco +63 917 325 1292</td><td>—</td><td>Tubod, San Juan · cocogrovebeachresort.com</td></tr>
+  <tr><td class="nm">Island Diaries (Siquijor)</td><td class="ph"><a class="tel" href="tel:+639067139620">+63 906 713 9620</a><br><a class="tel" href="tel:+63354192367">(035) 419-2367</a></td><td>차종별 상이</td><td>배달+회수 ₱300 · 항구 픽업은 예약 시 확인</td></tr>
+  <tr><td class="nm">Mango Rentals (Siquijor)</td><td class="ph"><a class="tel" href="tel:+639455133998">+63 945 513 3998</a></td><td>₱350/일 · 3~7일 ₱300</td><td>FB mangorentalssiquijor</td></tr>
+  <tr><td class="nm">OceanJet</td><td class="ph"><a class="tel" href="tel:+63322557560">+63 32 255 7560</a><br><a class="tel" href="tel:+639176380000">+63 917 638 0000</a><br>Siquijor <a class="tel" href="tel:+639190665964">+63 919 066 5964</a></td><td>₱950~1,450</td><td>oceanjet.net · 지원 평일 05:00–19:00 / 주말 06:00–17:00 · Messenger m.me/oceanjet</td></tr>
+  <tr><td class="nm">Bohol Beach Club</td><td class="ph"><a class="tel" href="tel:+63384110482">+63 38 411 0482</a><br><a class="tel" href="tel:+639274527054">+63 927 452 7054</a></td><td>데이유즈 성인 ₱1,000<br>(₱650 F&B 환급)</td><td>09:00–17:00 수영장·해변만 · <b>만실이면 워크인 거절 — 전화 필수</b> · 체크인 15:00 / 체크아웃 12:00 · 프런트 24시간</td></tr>
+  <tr><td class="nm">Amorita 리조트</td><td class="ph"><a class="tel" href="tel:+63385029003">+63 38 502 9003</a><br><a class="tel" href="tel:+639177264526">+63 917 726 4526</a><br>예약 <a class="tel" href="tel:+639178619441">+63 917 861 9441</a></td><td>—</td><td>#1 Ester A. Lim Dr, Tawala · inquiries@amoritaresort.com · <b>레이트 체크아웃 정책 미공표</b></td></tr>
+  <tr><td class="nm">Coco Grove</td><td class="ph"><a class="tel" href="tel:+639173141415">+63 917 314 1415</a><br><a class="tel" href="tel:+639695215658">+63 969 521 5658</a><br>Casa Coco <a class="tel" href="tel:+639173251292">+63 917 325 1292</a></td><td>—</td><td>Tubod, San Juan · cocogrovebeachresort.com</td></tr>
 </table>
 </div>
 
@@ -683,8 +701,8 @@
   ① <b>Alona Austria Resort 9/13→15 2박 예약</b> — 옛 이름 <b>Casa Manni's Garden</b>으로도 검색됩니다. <b>02:30 도착을 메일로 사전 통보</b><br>
   ② <b>OceanJet 티켓 시각 대조</b> — 공표는 Tagbilaran발 07:30 / Siquijor발 14:30<br>
   ③ <b>스파 예약 3건</b> — Temple Spa 왓츠앱(9/15) · Siquijor Massage(9/16) · <b>Luna Tiger는 Fresha 온라인 예약</b>(9/17)<br>
-  ④ <b>오토바이 2건</b> — ⓐ 9/14 11:00 Alona Austria 배달 → <b>9/15 오전 호텔에서 회수</b> ⓑ 9/17 저녁 Amorita 배달 → 9/18 밤 공항 반납. <b>보증금·여권을 잡지 않는 업체</b>로 (GOODBIKE +63 926 680 6486). <b>헬멧 2개</b> 명시<br>
-  ⑤ <b>Amorita 레이트 체크아웃</b> 협의 (공표 정책 없음) · 9/14 Dumaluan에 가실 거면 <b>Oceanica에 당일 아침 전화</b> (+63 917 716 7609)<br>
+  ④ <b>오토바이 2건</b> — ⓐ 9/14 11:00 Alona Austria 배달 → <b>9/15 오전 호텔에서 회수</b> ⓑ 9/17 저녁 Amorita 배달 → 9/18 밤 공항 반납. <b>보증금·여권을 잡지 않는 업체</b>로 (GOODBIKE <a class="tel" href="tel:+639266806486">+63 926 680 6486</a>). <b>헬멧 2개</b> 명시<br>
+  ⑤ <b>Amorita 레이트 체크아웃</b> 협의 (공표 정책 없음) · 9/14 Dumaluan에 가실 거면 <b>Oceanica에 당일 아침 전화</b> (<a class="tel" href="tel:+639177167609">+63 917 716 7609</a>)<br>
   ⑥ <b>국제운전면허증</b> — Siquijor는 검문 잦습니다<br>
   ⑦ <b>9/14 오전 트라이시클 대절</b> — Napaling + Momo Beach + 복귀, 전날 밤 프런트에 요청<br>
   ⑧ <b>9/15 05:20 항구行 차량</b> — 전날 밤 프런트에 예약. 숙박비는 9/14 밤에 미리 정산<br>
