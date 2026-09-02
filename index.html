@@ -752,6 +752,8 @@
     'Napaling':'Napaling Sardine Run, Panglao, Bohol',
     'Momo Beach':'Momo Beach, Panglao, Bohol',
     'Dumaluan':'Dumaluan Beach Semi Public, Panglao, Bohol',
+    'BBC':'Bohol Beach Club, Panglao, Bohol',
+    'Oceanica':'Oceanica Resort Panglao, Bolod, Bohol',
     'Bolod':'Oceanica Resort Panglao, Bolod, Bohol',
     'Paliton':'Paliton Beach, San Juan, Siquijor',
     'Tulapos':'Tulapos Marine Sanctuary, Enrique Villanueva, Siquijor',
@@ -778,6 +780,18 @@
     line.innerHTML = '📍 Google Maps: <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+q+'">'+places[key]+'</a>';
     el.appendChild(line);
   });
+  const firstCoast = [...document.querySelectorAll('#d14 .sched tr')].find(tr => tr.textContent.includes('수면 보충'));
+  if (firstCoast) {
+    firstCoast.className = 'hero';
+    firstCoast.querySelector('.t').textContent = '12:15–14:15';
+    firstCoast.querySelector('td:nth-child(2)').innerHTML = '<span class="place">BBC·Oceanica 인근 해안 방문 — Dumaluan·Bolod</span><div class="note"><b>첫날 꼭 보고 싶은 남쪽 해안을 오토바이로 이동합니다.</b> 먼저 BBC 쪽 해안을 보고, 이어 Oceanica(Bolod)로 이동해 점심과 해변 산책을 합니다. 입장 조건과 수영 가능 여부는 현장 안내를 따르세요.<br><b>Google Maps 검색 순서:</b> Bohol Beach Club → Oceanica Resort Panglao → Dumaluan Beach Semi Public</div>';
+    ['BBC','Oceanica','Dumaluan'].forEach(key => {
+      const q = encodeURIComponent(places[key]);
+      const line = document.createElement('span'); line.className='mapq';
+      line.innerHTML = '📍 <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+q+'">'+places[key]+'</a>';
+      firstCoast.querySelector('.place').appendChild(line);
+    });
+  }
   // 조석은 이미 일정에 반영했으므로 화면에서는 반복 노출하지 않음
   document.querySelectorAll('.tideline,.p-tide').forEach(el => el.remove());
   document.querySelectorAll('.tags .tag').forEach(el => {
