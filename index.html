@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Bohol 2026">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1418'/%3E%3Cpath d='M4 20c3-3 5 1 8-2s5 1 8-2 5 1 8-2' stroke='%234fd1c5' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
-<title>Panglao · Siquijor · 2026.09.13–18 (v3 · 조석 반영)</title>
+<title>Panglao · Siquijor · 2026.09.13–18</title>
 <style>
   :root{
     --bg:#0d1418; --panel:#131e24; --panel2:#18262d; --line:#24373f;
@@ -211,7 +211,7 @@
 
 <nav class="jump"><a href="#d14">14일 Napaling</a><a href="#d15">15일 Siquijor</a><a href="#d16">16일 링로드</a><a href="#d17">17일 Caticugan</a><a href="#d18">18일 Danao</a><a href="#tides">조석표</a><a href="#contacts">연락처</a></nav>
 <header>
-  <h1>Panglao · Siquijor — 조석 반영본</h1>
+  <h1>Panglao · Siquijor — 여행 일정표</h1>
   <div class="sub">9/13(일) 심야 도착 → 9/18(금) 24:00 출국 · <b>Alona Austria 2박</b> → Coco Grove 2박 → Amorita 1박</div>
   <div class="tags">
     <span class="tag">일출 05:34 / 일몰 17:44~17:47</span>
@@ -778,12 +778,27 @@
     line.innerHTML = '📍 Google Maps: <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+q+'">'+places[key]+'</a>';
     el.appendChild(line);
   });
+  // 조석은 이미 일정에 반영했으므로 화면에서는 반복 노출하지 않음
+  document.querySelectorAll('.tideline,.p-tide').forEach(el => el.remove());
+  document.querySelectorAll('.tags .tag').forEach(el => {
+    if (/조석|일출|일몰|신월/.test(el.textContent)) el.remove();
+  });
   // 일정표에서 반복 확인이 필요 없는 조석표/조석 해설/호텔 후보 섹션은 숨김
   const tide = document.getElementById('tides');
   if (tide) {
     let n = tide;
     while ((n = n.nextElementSibling) && !(n.matches('h2') && n.textContent.includes('일정'))) n.remove();
     tide.remove();
+  }
+  // 준비물은 일정 시작 전에 바로 확인할 수 있도록 상단으로 이동
+  const packing = [...document.querySelectorAll('h2')].find(h => h.textContent.includes('준비물'));
+  const schedule = [...document.querySelectorAll('h2')].find(h => h.textContent.trim() === '일정');
+  if (packing && schedule) {
+    const nodes = [];
+    let n = packing;
+    while (n && n !== schedule) { nodes.push(n); n = n.nextElementSibling; }
+    const anchor = document.querySelector('.lead') || document.querySelector('header');
+    nodes.reverse().forEach(node => anchor.after(node));
   }
   document.querySelectorAll('h2,h3').forEach(h => {
     if (h.textContent.includes('호텔 후보') || h.textContent.includes('Henann') || h.textContent.includes('탈락한 곳')) {
