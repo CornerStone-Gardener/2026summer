@@ -197,6 +197,13 @@
     .place{font-size:14.5px}
   }
 
+  .mapq{display:block;margin-top:6px;font-size:11.5px;color:var(--aqua)}
+  .mapq a{color:var(--aqua);text-decoration:none;border-bottom:1px dotted rgba(79,209,197,.55)}
+
+</style>
+<style>
+  .mapq{display:block;margin-top:6px;font-size:11.5px;color:var(--aqua)}
+  .mapq a{color:var(--aqua);text-decoration:none;border-bottom:1px dotted rgba(79,209,197,.55)}
 </style>
 </head>
 <body>
@@ -738,5 +745,53 @@
 </footer>
 
 </div>
+<script>
+(() => {
+  // 일정표에서 바로 복사해 Google Maps로 검색할 수 있는 목적지명
+  const places = {
+    'Napaling':'Napaling Sardine Run, Panglao, Bohol',
+    'Momo Beach':'Momo Beach, Panglao, Bohol',
+    'Dumaluan':'Dumaluan Beach Semi Public, Panglao, Bohol',
+    'Bolod':'Oceanica Resort Panglao, Bolod, Bohol',
+    'Paliton':'Paliton Beach, San Juan, Siquijor',
+    'Tulapos':'Tulapos Marine Sanctuary, Enrique Villanueva, Siquijor',
+    'Salagdoong':'Salagdoong Beach, Maria, Siquijor',
+    'Cambugahay':'Cambugahay Falls, Lazi, Siquijor',
+    'Lazi Church':'San Isidro Labrador Parish Church, Lazi, Siquijor',
+    'Balete':'Enchanted Balete Tree, Lazi, Siquijor',
+    'Caticugan':'Caticugan Marine Sanctuary, Siquijor',
+    'Danao Wall':'Danao Wall, Panglao, Bohol',
+    'Kalipayan':'Kalipayan Beach, Panglao, Bohol',
+    'Bohol-Panglao International Airport':'Bohol-Panglao International Airport',
+    'Siquijor Port':'Siquijor Port',
+    'Tagbilaran':'Tagbilaran Port, Bohol',
+    'Amorita':'Amorita Resort, Panglao, Bohol',
+    'Coco Grove':'Coco Grove Beach Resort, San Juan, Siquijor',
+    'Alona Austria':'Alona Austria Resort, Panglao, Bohol'
+  };
+  document.querySelectorAll('.sched .place').forEach(el => {
+    const key = Object.keys(places).find(k => el.textContent.includes(k));
+    if (!key || el.querySelector('.mapq')) return;
+    const q = encodeURIComponent(places[key]);
+    const line = document.createElement('span');
+    line.className = 'mapq';
+    line.innerHTML = '📍 Google Maps: <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+q+'">'+places[key]+'</a>';
+    el.appendChild(line);
+  });
+  // 일정표에서 반복 확인이 필요 없는 조석표/조석 해설/호텔 후보 섹션은 숨김
+  const tide = document.getElementById('tides');
+  if (tide) {
+    let n = tide;
+    while ((n = n.nextElementSibling) && !(n.matches('h2') && n.textContent.includes('일정'))) n.remove();
+    tide.remove();
+  }
+  document.querySelectorAll('h2,h3').forEach(h => {
+    if (h.textContent.includes('호텔 후보') || h.textContent.includes('Henann') || h.textContent.includes('탈락한 곳')) {
+      let n = h; while (n && !(n = n.nextElementSibling)?.matches('h2')) { if (n) { const old=n; n=n.nextElementSibling; old.remove(); } }
+      h.remove();
+    }
+  });
+})();
+</script>
 </body>
 </html>
