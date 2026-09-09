@@ -62,7 +62,7 @@ window.TRAVEL = {
     '원본의 검증되지 않은 조석 보간값, 평점·가격·영업시간, 조류가 없다는 단정은 새 화면에 확정 정보로 옮기지 않았습니다. 날씨와 입수 조건은 당일 현장 확인이 필요합니다.'
   ],
   sources:[
-    ['기존 여행 일정표','index.html','사용자 자료 · 일정과 취향의 원본'],
+    ['기존 여행 일정표','original-complete.html','사용자 자료 · 일정과 취향의 원본'],
     ['OceanJet 운항사','https://www.oceanjet.net/','최신 운항·예매 확인'],
     ['OceanJet 2026년 2월 공표','https://www.oceanjet.net/news-and-updates/oceanjet-daily-schedule-month-of-february-2026','9월 확정표가 아닌 참고 자료'],
     ['Coco Grove 공식 요금·포함 사항','https://www.cocogrovebeachresort.com/room-rates/','항구 이동·보호구역 요금 포함 안내, 개별 예약 조건 확인'],
