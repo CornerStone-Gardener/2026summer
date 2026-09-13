@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>팡라오 · 시키호르 일정표</title>
+  <style>
+    :root{color-scheme:light dark;--bg:#f4f6f3;--card:#fff;--ink:#203832;--muted:#586b64;--accent:#176953;--soft:#eaf2ed;--line:#d6e1d9;--badge:#78501b;--badge-bg:#fff0d6}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;overflow-wrap:anywhere}a{color:var(--accent);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}main{max-width:920px;margin:auto;padding:32px 20px 48px}h1,h2,h3,p{margin:0}h1{font-size:clamp(1.7rem,5vw,2.6rem);line-height:1.3;letter-spacing:-.05em}h2{font-size:1.35rem;line-height:1.4}h3{font-size:1rem;line-height:1.5}.eyebrow{font-size:.78rem;font-weight:750;letter-spacing:.12em;color:var(--accent);margin-bottom:10px}.updated,.muted{color:var(--muted);font-size:.88rem}.updated{margin:12px 0 22px}.summary{display:grid;grid-template-columns:1fr 1fr;gap:12px}.panel,.day,.notes{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}.panel h2{font-size:1rem;margin-bottom:10px}.panel p+p{margin-top:12px}.stays{padding:0;margin:0;list-style:none}.stays li+li{margin-top:10px}.stays small{display:block;color:var(--muted)}.actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.actions a,button,.chip{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);font:inherit;color:var(--accent);text-decoration:none}button{cursor:pointer}.jump{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}.chip{flex:1 0 88px;font-size:.9rem;font-weight:650}.day{margin-top:20px;scroll-margin-top:16px}.date{color:var(--accent);font-weight:750;font-size:.9rem;margin-bottom:8px}.day .desc{margin:10px 0;color:var(--muted)}.stay{background:var(--soft);border-radius:10px;padding:10px 12px;font-size:.9rem}.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.fact{min-width:0;border-left:3px solid var(--line);padding-left:10px}.fact dt{font-size:.76rem;font-weight:750;color:var(--accent)}.fact dd{margin:3px 0 0;font-size:.86rem;color:var(--muted)}.timeline{list-style:none;margin:22px 0 0;padding:0}.event{display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px;padding:0 0 20px}.event:last-child{padding-bottom:0}.time{font-size:.87rem;font-weight:750;font-variant-numeric:tabular-nums;color:var(--accent)}.event-body{position:relative;border-left:2px solid var(--line);padding-left:18px;min-width:0}.event-body:before{content:"";position:absolute;left:-5px;top:8px;width:8px;height:8px;border-radius:50%;background:var(--accent)}.place{display:inline-block;font-size:.8rem;margin-bottom:4px}.event h3{margin-bottom:5px}.memo,.condition{font-size:.87rem;color:var(--muted);white-space:pre-line}.condition{margin-top:6px}.badge{display:inline-block;vertical-align:middle;font-size:.7rem;font-weight:750;background:var(--badge-bg);color:var(--badge);border-radius:6px;padding:1px 7px;margin-left:7px}.notes{margin-top:28px}.notes ul{padding-left:20px;margin:14px 0 0}.notes li{font-size:.88rem;color:var(--muted)}.notes li+li{margin-top:12px}.footer{margin-top:20px;text-align:center;font-size:.8rem;color:var(--muted)}
+    @media(prefers-color-scheme:dark){:root{--bg:#111c19;--card:#1b2a25;--ink:#e4ede7;--muted:#b0c3b8;--accent:#91dcbc;--soft:#253c32;--line:#3a5045;--badge:#ffdaa0;--badge-bg:#4a3921}}
+    @media(max-width:600px){main{padding:24px 14px 36px}.summary,.facts{grid-template-columns:1fr}.panel,.day,.notes{padding:18px}.event{grid-template-columns:78px minmax(0,1fr);gap:10px}.event-body{padding-left:12px}.time{font-size:.8rem}.actions a,button{font-size:.85rem;padding:8px 12px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @page{size:A4;margin:12mm}
+    @media print{ :root{--bg:#fff;--card:#fff;--ink:#111;--muted:#333;--accent:#174f3c;--soft:#f4f6f4;--line:#ccc;--badge:#333;--badge-bg:#eee}body{font-size:9pt;line-height:1.4}main{max-width:none;padding:0}.actions,.jump,.footer{display:none}.summary,.facts{grid-template-columns:1fr 1fr}h1{font-size:22pt}h2{font-size:14pt}.panel,.day,.notes{border-radius:0;padding:12px}.day{break-inside:avoid;page-break-inside:avoid;margin-top:12px}.event{grid-template-columns:90px minmax(0,1fr);padding-bottom:9px;break-inside:avoid}.memo,.condition,.time,.fact dd,.notes li,.stay{font-size:8pt}.place,.date{font-size:8pt}.event h3{font-size:9pt}.timeline{margin-top:12px}.facts{gap:6px;margin:10px 0}.updated{margin:8px 0 12px}a{color:inherit;text-decoration:none}.notes li{break-inside:avoid}.notes li+li{margin-top:7px}p{orphans:3;widows:3}}
+  </style>
+</head>
+<body>
+  <main id="top">
+    <header>
+      <p class="eyebrow">2026.09.13 — 09.19 · 7 DAYS</p>
+      <h1>팡라오 · 시키호르 일정표</h1>
+      <p class="updated">갱신일 <time datetime="2026-09-13">2026-09-13</time> · 현지 일정은 PHT, 인천 출발은 KST</p>
+      <div class="summary">
+        <section class="panel" aria-labelledby="flight-title">
+          <h2 id="flight-title">항공 · 제주항공</h2>
+          <p><strong>가는 편</strong><br>9/13 21:00 KST 인천 출발<br>→ 9/14 02:00 PHT 팡라오 도착</p>
+          <p><strong>오는 편</strong><br>9/19 02:00 PHT 팡라오 출발 → 인천<br><span class="muted">9/18 23:00 공항 도착 목표 · 인천 도착 시각은 항공권 확인</span></p>
+        </section>
+        <section class="panel" aria-labelledby="stay-title">
+          <h2 id="stay-title">숙소 · 3곳, 5박</h2>
+          <ul class="stays" id="stays"></ul>
+        </section>
+      </div>
+      <nav class="actions" aria-label="관련 페이지">
+        <a href="index.html">지도 보기 ↗</a>
+        <a href="original-complete.html">원문 전체 ↗</a>
+        <button type="button" id="print">인쇄 / PDF</button>
+      </nav>
+    </header>
+    <nav class="jump" id="jump" aria-label="날짜 바로가기"></nav>
+    <div id="days"></div>
+    <noscript><p>전체 일정을 보려면 JavaScript를 활성화하세요. <a href="original-complete.html">원문 전체 보기</a></p></noscript>
+    <section class="notes" aria-labelledby="notes-title">
+      <h2 id="notes-title">여행 메모</h2>
+      <ul id="notes"></ul>
+    </section>
+    <p class="footer"><a href="#top">맨 위로 ↑</a> · 장소 이름을 누르면 Google Maps 검색으로 연결됩니다.</p>
+  </main>
+  <script src="assets/travel-data.js"></script>
+  <script>
+    'use strict';
+    const el = (tag, className, text) => {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text;
+      return node;
+    };
+    document.getElementById('print').addEventListener('click', () => window.print());
+    const data = window.TRAVEL;
+    if (!data || !Array.isArray(data.days)) {
+      document.getElementById('days').append(el('p', 'panel', '일정 데이터를 불러오지 못했습니다. assets/travel-data.js 파일을 확인해 주세요.'));
+    } else {
+      const places = data.places || {};
+      function placeLink(key) {
+        const place = places[key];
+        if (!place) return el('span', 'place', key || '장소 미정');
+        const link = el('a', 'place', place.name);
+        link.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(place.query || place.name);
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        return link;
+      }
+      for (const [key, dates] of [['austria', '9/13–9/15 · 2박 · 9/14 새벽 입실'], ['coco', '9/15–9/17 · 2박'], ['amorita', '9/17–9/18 · 1박']]) {
+        const item = el('li');
+        item.append(placeLink(key), el('small', '', dates));
+        document.getElementById('stays').append(item);
+      }
+      const labels = {weatherSummary:'예보', sleepSummary:'수면', tideSummary:'조석', cashSummary:'현금', contingency:'변경·결항 대안'};
+      const structural = new Set(['date', 'weekday', 'title', 'desc', 'stay', 'route', 'events', 'visits']);
+      function readable(value) {
+        if (Array.isArray(value)) return value.map(readable).join(' · ');
+        if (value && typeof value === 'object') return Object.entries(value).map(([key, item]) => key + ': ' + readable(item)).join(' · ');
+        return String(value);
+      }
+      data.days.forEach((day, index) => {
+        const id = 'day-' + String(day.date).replace(/[^0-9]/g, '');
+        const chip = el('a', 'chip', day.date + ' (' + day.weekday + ')');
+        chip.href = '#' + id;
+        document.getElementById('jump').append(chip);
+        const card = el('article', 'day');
+        card.id = id;
+        card.setAttribute('aria-labelledby', id + '-title');
+        const title = el('h2', '', day.title);
+        title.id = id + '-title';
+        card.append(el('p', 'date', 'DAY ' + String(index + 1).padStart(2, '0') + ' · ' + day.date + ' (' + day.weekday + ')'), title);
+        if (day.desc) card.append(el('p', 'desc', day.desc));
+        if (day.stay) card.append(el('p', 'stay', '숙박 · ' + day.stay));
+        const facts = el('dl', 'facts');
+        for (const [key, value] of Object.entries(day)) {
+          if (structural.has(key) || value === '' || value == null) continue;
+          const fact = el('div', 'fact');
+          fact.append(el('dt', '', labels[key] || key), el('dd', '', readable(value)));
+          facts.append(fact);
+        }
+        if (facts.children.length) card.append(facts);
+        const timeline = el('ol', 'timeline');
+        for (const event of day.events || []) {
+          const [time, key, heading, memo, metadata = {}] = event;
+          const visit = (day.visits || []).find(item => item.place === key && item.optional);
+          const optional = metadata.optional || visit?.optional || /선택/.test(time + ' ' + heading);
+          const row = el('li', 'event');
+          const body = el('div', 'event-body');
+          const eventTitle = el('h3', '', heading);
+          if (optional) eventTitle.append(el('span', 'badge', '선택'));
+          body.append(placeLink(key), eventTitle);
+          if (memo) body.append(el('p', 'memo', memo));
+          const condition = metadata.condition || visit?.condition;
+          if (condition) body.append(el('p', 'condition', '조건 · ' + condition));
+          row.append(el('div', 'time', time), body);
+          timeline.append(row);
+        }
+        card.append(timeline);
+        document.getElementById('days').append(card);
+      });
+      for (const note of data.notes || []) document.getElementById('notes').append(el('li', '', note));
+    }
+  </script>
+</body>
+</html>
