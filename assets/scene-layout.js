@@ -4,6 +4,9 @@
   const drawer=$('scene-menu');for(const selector of ['.masthead','#island-jumps','.map-controls','.playback','.route-panel','.map-caption']){const el=document.querySelector(selector);if(el)drawer.appendChild(el);}
   const close=document.createElement('button');close.id='scene-place-close';close.textContent='설명 접기 ⌄';document.querySelector('.place-panel').prepend(close);
   const daySmall=$('scene-day').querySelector('small'),dayTitle=$('scene-day').querySelector('b');
+  const forecast=document.createElement('span');forecast.className='scene-forecast';$('scene-day').appendChild(forecast);
+  function dayWeather(index=window.travelAnimationState?.day??1){const d=window.TRAVEL.days[index],weather=d.weatherSummary||'날씨 현장 확인',icon=weather.match(/[☀🌦⛈]/u)?.[0]||'☁';forecast.replaceChildren();const line=document.createElement('span'),symbol=document.createElement('i'),summary=document.createElement('span');line.className='forecast-main';symbol.textContent=icon;symbol.setAttribute('aria-hidden','true');summary.textContent=weather.replace(icon,'').replace('9/13 조회 예보 · ','');summary.title=weather;line.append(symbol,summary);forecast.appendChild(line);const tide=document.createElement('span');tide.className='tide-mini';tide.textContent=d.tideSummary||'조석 현장 확인';tide.title='시키호르 참고값 · 팡라오 현지 조석 아님';forecast.appendChild(tide);const sleep=document.createElement('span');sleep.textContent=d.sleepSummary||'수면 시각 미정';forecast.appendChild(sleep);}
+  document.addEventListener('travel-day',e=>dayWeather(e.detail.day));dayWeather();
   function text(el,value){if(el.textContent!==value)el.textContent=value;}
   function refresh(){
     const d=$('day-kicker').textContent.replace('DAY ','').replace(' / ',' · ');
